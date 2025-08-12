@@ -1,0 +1,243 @@
+/* Modern, clean styling for the voice agent */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .tagline {
+    color: #7f8c8d;
+    font-size: 1rem;
+  }
+  
+  .chat-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  
+  .message {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message.user {
+    align-items: flex-end;
+  }
+  
+  .message.assistant {
+    align-items: flex-start;
+  }
+  
+  .message-content {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user .message-content {
+    background-color: #3498db;
+    color: white;
+    border-bottom-right-radius: 4px;
+  }
+  
+  .assistant .message-content {
+    background-color: #f1f1f1;
+    color: #333;
+    border-bottom-left-radius: 4px;
+  }
+  
+  .controls {
+    display: flex;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .record-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .record-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .record-button.recording {
+    background-color: #e74c3c;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .record-button i {
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+  }
+  
+  .record-button span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .text-input {
+    flex: 1;
+    display: flex;
+    position: relative;
+  }
+  
+  .text-input input {
+    width: 100%;
+    padding: 12px 50px 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .text-input input:focus {
+    border-color: #3498db;
+  }
+  
+  .text-input button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .text-input button:hover {
+    background-color: #2980b9;
+  }
+  
+  .status {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+  }
+  
+  .status .error {
+    color: #e74c3c;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+    
+    .chat-container {
+      height: 80vh;
+    }
+    
+    .message-content {
+      max-width: 90%;
+    }
+    
+    .record-button {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+.language-selector {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-selector label {
+  font-size: 14px;
+  color: #555;
+}
+
+.language-selector select {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.language-selector select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}

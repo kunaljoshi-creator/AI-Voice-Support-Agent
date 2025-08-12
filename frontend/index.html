@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Voice Support Agent</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-headset"></i> AI Voice Support Agent</h1>
+      <p class="tagline">Your virtual customer support assistant</p>
+    </header>
+
+    <div class="chat-container">
+      <div id="chat-messages" class="chat-messages">
+        <div class="message assistant">
+          <div class="message-content">
+            <p>Hello! I'm Alex, your AI support agent. How can I help you today?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <!-- Add this before the record button -->
+        <div class="language-selector">
+          <label for="languageSelect"> Language:</label>
+          <select id="languageSelect">
+            <option value="en-US">English</option>
+            <option value="hi-IN">Hindi</option>
+            <option value="mr-IN">Marathi</option>
+          </select>
+        </div>
+        <button id="recordButton" class="record-button">
+          <i class="fas fa-microphone"></i>
+          <span id="recordButtonText">Speak</span>
+        </button>
+        
+        <div class="text-input">
+          <input type="text" id="textInput" placeholder="Or type your message here...">
+          <button id="sendButton"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+
+      <div class="status">
+        <p id="status-text">Ready to assist</p>
+      </div>
+    </div>
+
+    <audio id="player" hidden></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
